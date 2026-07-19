@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+.container {
+    width: min(1000px, 92%);
+    margin: 50px auto;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 22px;
+}
+
+.user-form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.user-form input,
+.user-form button {
+    height: 46px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.user-form input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #d1d5db;
+    padding: 0 14px;
+}
+
+.user-form input:focus {
+    outline: 2px solid #2563eb;
+    border-color: transparent;
+}
+
+.user-form button,
+.toggle-btn {
+    border: none;
+    cursor: pointer;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.user-form button {
+    padding: 0 24px;
+}
+
+.user-form button:hover,
+.toggle-btn:hover {
+    background: #1d4ed8;
+}
+
+.message {
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.message.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.message.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background: #eff6ff;
+}
+
+.toggle-btn {
+    padding: 9px 16px;
+    border-radius: 8px;
+}
+
+.toggle-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.status-badge {
+    display: inline-block;
+    min-width: 34px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+}
+
+.status-0 {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-1 {
+    background: #dcfce7;
+    color: #166534;
+}
+
+@media (max-width: 650px) {
+    .user-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .user-form input,
+    .user-form button {
+        width: 100%;
+    }
+}
